@@ -31,4 +31,34 @@ public class Card {
 		return kivancsisag;
 	}
 
+	public void comparableIgazMondas(Card card1) {
+		if (card1.igazMondas > this.igazMondas) {
+			System.out.println(card1.nev + " nyert.");
+		} else if (card1.igazMondas < this.igazMondas) {
+			System.out.println(this.nev + " nyert.");
+		} else {
+			System.out.println("Döntetlen. Válassz más tulajdonságot.");
+		}
+	}
+
+	public void comparableBatorsag(Card card1) {
+		if (card1.batorsag > this.batorsag) {
+			System.out.println(card1.nev + " nyert.");
+		} else if (card1.batorsag < this.batorsag) {
+			System.out.println(this.nev + " nyert.");
+		} else {
+			System.out.println("Döntetlen. Válassz más tulajdonságot.");
+		}
+	}
+
+	public void comparableKivancsisag(Card card1) {
+		if (card1.kivancsisag > this.kivancsisag) {
+			System.out.println(card1.nev + " nyert.");
+		} else if (card1.kivancsisag < this.kivancsisag) {
+			System.out.println(this.nev + " nyert.");
+		} else {
+			System.out.println("Döntetlen. Válassz más tulajdonságot.");
+		}
+	}
+
 }
