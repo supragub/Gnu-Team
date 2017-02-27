@@ -4,7 +4,7 @@ public class Card {
 
 	int igazMondas;
 	int batorsag;
-	int kivancsisag;
+	int kivancsisagg;
 
 	public Card() {
 
