@@ -15,4 +15,20 @@ public class Card {
 
 	}
 
+	public String getNev() {
+		return nev;
+	}
+
+	public int getIgazMondas() {
+		return igazMondas;
+	}
+
+	public int getBatorsag() {
+		return batorsag;
+	}
+
+	public int getKivancsisag() {
+		return kivancsisag;
+	}
+
 }
