@@ -68,6 +68,7 @@ public class Main {
 		deck.cardList.add(card30);
 		deck.cardList.add(card31);
 		deck.cardList.add(card32);
+		deck.shuffle(deck.cardList);
 		deck.printOut();
 	}
 

@@ -1,6 +1,7 @@
 package GnuTeam.BaratokKozt;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Deck {
 
@@ -10,6 +11,10 @@ public class Deck {
 		for (Card c : cardList) {
 			System.out.println(c.nev);
 		}
+	}
+
+	public void shuffle(ArrayList theList) {
+		Collections.shuffle(theList);
 	}
 
 }
