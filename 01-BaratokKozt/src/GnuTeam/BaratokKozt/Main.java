@@ -68,8 +68,12 @@ public class Main {
 		deck.cardList.add(card30);
 		deck.cardList.add(card31);
 		deck.cardList.add(card32);
-		deck.shuffle(deck.cardList);
-		deck.printOut();
+		System.out.println(card1.getBalhezas());
+		card5.comparableBalhezas(card18);
+		Hand hand = new Hand();
+		hand.getCards(deck.cardList);
+		hand.printIn();
+		System.out.println(hand.cardsInHand.size());
 	}
 
 }

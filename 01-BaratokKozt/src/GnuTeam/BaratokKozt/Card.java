@@ -4,14 +4,14 @@ public class Card {
 
 	String nev;
 	int igazMondas;
-	int batorsag;
-	int kivancsisag;
+	int balhezas;
+	int feltekenyseg;
 
-	public Card(String nev, int igazMondas, int batorsag, int kivancsisag) {
+	public Card(String nev, int igazMondas, int balhezas, int feltekenyseg) {
 		this.nev = nev;
 		this.igazMondas = igazMondas;
-		this.batorsag = batorsag;
-		this.kivancsisag = kivancsisag;
+		this.balhezas = balhezas;
+		this.feltekenyseg = feltekenyseg;
 
 	}
 
@@ -23,12 +23,12 @@ public class Card {
 		return igazMondas;
 	}
 
-	public int getBatorsag() {
-		return batorsag;
+	public int getBalhezas() {
+		return balhezas;
 	}
 
-	public int getKivancsisag() {
-		return kivancsisag;
+	public int getFeltekenyseg() {
+		return feltekenyseg;
 	}
 
 	public void comparableIgazMondas(Card card1) {
@@ -41,20 +41,20 @@ public class Card {
 		}
 	}
 
-	public void comparableBatorsag(Card card1) {
-		if (card1.batorsag > this.batorsag) {
+	public void comparableBalhezas(Card card1) {
+		if (card1.balhezas > this.balhezas) {
 			System.out.println(card1.nev + " nyert.");
-		} else if (card1.batorsag < this.batorsag) {
+		} else if (card1.balhezas < this.balhezas) {
 			System.out.println(this.nev + " nyert.");
 		} else {
 			System.out.println("Döntetlen. Válassz más tulajdonságot.");
 		}
 	}
 
-	public void comparableKivancsisag(Card card1) {
-		if (card1.kivancsisag > this.kivancsisag) {
+	public void comparableFeltekenyseg(Card card1) {
+		if (card1.feltekenyseg > this.feltekenyseg) {
 			System.out.println(card1.nev + " nyert.");
-		} else if (card1.kivancsisag < this.kivancsisag) {
+		} else if (card1.feltekenyseg < this.feltekenyseg) {
 			System.out.println(this.nev + " nyert.");
 		} else {
 			System.out.println("Döntetlen. Válassz más tulajdonságot.");

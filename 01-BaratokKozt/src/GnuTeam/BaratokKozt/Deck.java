@@ -13,7 +13,7 @@ public class Deck {
 		}
 	}
 
-	public void shuffle(ArrayList theList) {
+	public void shuffle(ArrayList<Card> theList) {
 		Collections.shuffle(theList);
 	}
 
