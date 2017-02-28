@@ -7,10 +7,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class TestReadFile {
+public class Logo {
 
 	@SuppressWarnings("deprecation")
-	public static void main(String[] args) throws InterruptedException {
+	public void logo() {
 
 		File file = new File("baratok-kozt-logo.txt");
 		FileInputStream fis = null;

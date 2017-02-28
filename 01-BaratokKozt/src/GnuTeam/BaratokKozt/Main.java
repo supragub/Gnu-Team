@@ -3,6 +3,8 @@ package GnuTeam.BaratokKozt;
 public class Main {
 
 	public static void main(String[] args) {
+		Logo logo = new Logo();
+		logo.logo();
 		Deck deck = new Deck();
 		Card card1 = new Card("Berényi András", 9, 3, 1);
 		Card card2 = new Card("Berényi Miklós", 1, 9, 7);
