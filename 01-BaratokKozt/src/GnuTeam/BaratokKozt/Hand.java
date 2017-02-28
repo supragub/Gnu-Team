@@ -6,6 +6,7 @@ import java.util.Random;
 public class Hand {
 
 	ArrayList<Card> cardsInHand = new ArrayList<Card>();
+	ArrayList<Card> aiCards = new ArrayList<Card>();
 
 	public void getCards(ArrayList<Card> cardList) {
 		Random random = new Random();
@@ -20,8 +21,20 @@ public class Hand {
 		}
 	}
 
-	public void printIn() {
-		for (Card c : cardsInHand) {
+	public void getAICards(ArrayList<Card> cardList) {
+		int counter = 1;
+		while (counter <= 16) {
+			for (Card card : cardList) {
+				if (!cardsInHand.contains(card)) {
+					aiCards.add(card);
+					counter++;
+				}
+			}
+		}
+	}
+
+	public void printIn(ArrayList<Card> cList) {
+		for (Card c : cList) {
 			System.out.println(c.nev);
 		}
 	}
