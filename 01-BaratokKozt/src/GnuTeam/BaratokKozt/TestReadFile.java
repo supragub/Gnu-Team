@@ -1,3 +1,5 @@
+package GnuTeam.BaratokKozt;
+
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
 import java.io.File;
@@ -10,7 +12,7 @@ public class TestReadFile {
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws InterruptedException {
 
-		File file = new File("/home/tizedes/Desktop/JAVA/Test/src/baratok-kozt-logo.txt");
+		File file = new File("baratok-kozt-logo.txt");
 		FileInputStream fis = null;
 		BufferedInputStream bis = null;
 		DataInputStream dis = null;
