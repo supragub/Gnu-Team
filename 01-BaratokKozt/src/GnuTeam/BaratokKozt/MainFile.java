@@ -1,10 +1,24 @@
 package GnuTeam.BaratokKozt;
 
-public class Main {
+import java.util.Scanner;
 
-	public static void main(String[] args) {
+public class MainFile {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.out.println("");
 		Logo logo = new Logo();
 		logo.logo();
+		Thread.sleep(2000);
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Indításhoz nyomjon ENTER billentyűt.");
+		String enter = scanner.nextLine();
+		System.out.println("Pakli megkeverése...");
+		Thread.sleep(2500);
+		System.out.println("Lapok szétosztása...");
+		Thread.sleep(3000);
+		System.out.println("Sok szerencsét!");
+		Thread.sleep(1500);
+		System.out.println("-----------------");
 		Deck deck = new Deck();
 		Card card1 = new Card("Berényi András", 9, 3, 1);
 		Card card2 = new Card("Berényi Miklós", 1, 9, 7);
@@ -74,14 +88,21 @@ public class Main {
 		Card card = new Card();
 		hand.getCards(deck.cardList);
 		hand.getAICards(deck.cardList);
-		for (int i = 0; i <= hand.cardsInHand.size(); i++) {
+		for (int i = 0; i <= hand.cardsInHand.size() - 1; i++) {
+			System.out.println(i + 1 + ". kör.");
 			Card myCard = hand.showCard(hand.cardsInHand, i);
+			System.out.println("");
 			int inp = hand.chooseSkill();
+			System.out.println("Ellenfél lapja:");
+			System.out.println("");
+			Thread.sleep(1250);
 			Card AICard = hand.showCard(hand.aiCards, i);
+			Thread.sleep(1000);
 			hand.showWinner(inp, i);
 			System.out.println("Nyert körök: " + hand.myCounter + ".");
 			System.out.println("Gép által nyert körök: " + hand.AICounter + ".");
 			System.out.println("-------------------");
+			Thread.sleep(3000);
 		}
 
 	}
