@@ -48,6 +48,8 @@ public class Card {
 			System.out.println(this.nev + " nyert.");
 		} else {
 			System.out.println("Döntetlen. Válassz más tulajdonságot.");
+			Hand hand = new Hand();
+			hand.chooseSkill();
 		}
 	}
 
