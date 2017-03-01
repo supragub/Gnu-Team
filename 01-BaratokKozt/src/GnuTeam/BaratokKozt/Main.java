@@ -73,10 +73,13 @@ public class Main {
 		Hand hand = new Hand();
 		hand.getCards(deck.cardList);
 		hand.getAICards(deck.cardList);
-		Card myCard = hand.showCard(hand.cardsInHand);
-		int inp = hand.chooseSkill();
-		Card AICard = hand.showCard(hand.aiCards);
-		hand.showWinner(inp);
+		for (int i = 0; i <= hand.cardsInHand.size(); i++) {
+			Card myCard = hand.showCard(hand.cardsInHand, i);
+			int inp = hand.chooseSkill();
+			Card AICard = hand.showCard(hand.aiCards, i);
+			hand.showWinner(inp, i);
+			System.out.println("-------------------");
+		}
 
 	}
 

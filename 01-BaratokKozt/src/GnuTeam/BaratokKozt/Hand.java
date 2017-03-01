@@ -39,14 +39,10 @@ public class Hand {
 		}
 	}
 
-	public Card showCard(ArrayList<Card> cList) {
-		System.out.println(cList.get(0).nev + "\nIgazmondás: " + cList.get(0).igazMondas + "\nBalhézás: "
-				+ cList.get(0).balhezas + "\nFéltékenység: " + cList.get(0).feltekenyseg);
-		return cList.get(0);
-	}
-
-	public void removeFirstCard(ArrayList<Card> cList) {
-		cList.remove(cList.get(0));
+	public Card showCard(ArrayList<Card> cList, int i) {
+		System.out.println(cList.get(i).nev + "\nIgazmondás: " + cList.get(i).igazMondas + "\nBalhézás: "
+				+ cList.get(i).balhezas + "\nFéltékenység: " + cList.get(i).feltekenyseg);
+		return cList.get(i);
 	}
 
 	public int chooseSkill() {
@@ -63,23 +59,23 @@ public class Hand {
 		return inp;
 	}
 
-	public int showWinner(int inp) {
+	public int showWinner(int inp, int i) {
 
 		if (inp == 1) {
-			Card card = new Card(cardsInHand.get(0).nev, cardsInHand.get(0).igazMondas, cardsInHand.get(0).balhezas,
-					cardsInHand.get(0).feltekenyseg);
-			card.compareIgazMondas(aiCards.get(0));
-			return cardsInHand.get(0).igazMondas;
+			Card card = new Card(cardsInHand.get(i).nev, cardsInHand.get(i).igazMondas, cardsInHand.get(i).balhezas,
+					cardsInHand.get(i).feltekenyseg);
+			card.compareIgazMondas(aiCards.get(i));
+			return cardsInHand.get(i).igazMondas;
 		} else if (inp == 2) {
-			Card card = new Card(cardsInHand.get(0).nev, cardsInHand.get(0).igazMondas, cardsInHand.get(0).balhezas,
-					cardsInHand.get(0).feltekenyseg);
-			card.compareBalhezas(aiCards.get(0));
-			return cardsInHand.get(0).balhezas;
+			Card card = new Card(cardsInHand.get(i).nev, cardsInHand.get(i).igazMondas, cardsInHand.get(i).balhezas,
+					cardsInHand.get(i).feltekenyseg);
+			card.compareBalhezas(aiCards.get(i));
+			return cardsInHand.get(i).balhezas;
 		} else if (inp == 3) {
-			Card card = new Card(cardsInHand.get(0).nev, cardsInHand.get(0).igazMondas, cardsInHand.get(0).balhezas,
-					cardsInHand.get(0).feltekenyseg);
-			card.compareFeltekenyseg(aiCards.get(0));
-			return cardsInHand.get(0).feltekenyseg;
+			Card card = new Card(cardsInHand.get(i).nev, cardsInHand.get(i).igazMondas, cardsInHand.get(i).balhezas,
+					cardsInHand.get(i).feltekenyseg);
+			card.compareFeltekenyseg(aiCards.get(i));
+			return cardsInHand.get(i).feltekenyseg;
 		}
 		return 1;
 	}
