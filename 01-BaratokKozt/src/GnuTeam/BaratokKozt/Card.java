@@ -31,20 +31,10 @@ public class Card {
 		return feltekenyseg;
 	}
 
-	public void comparableIgazMondas(Card card1) {
+	public void compareIgazMondas(Card card1) {
 		if (card1.igazMondas > this.igazMondas) {
 			System.out.println(card1.nev + " nyert.");
 		} else if (card1.igazMondas < this.igazMondas) {
-			System.out.println(this.nev + " nyert.");
-		} else {
-			System.out.println("Döntetlen. Válassz más tulajdonságot.");
-		}
-	}
-
-	public void comparableBalhezas(Card card1) {
-		if (card1.balhezas > this.balhezas) {
-			System.out.println(card1.nev + " nyert.");
-		} else if (card1.balhezas < this.balhezas) {
 			System.out.println(this.nev + " nyert.");
 		} else {
 			System.out.println("Döntetlen. Válassz más tulajdonságot.");
@@ -53,7 +43,17 @@ public class Card {
 		}
 	}
 
-	public void comparableFeltekenyseg(Card card1) {
+	public void compareBalhezas(Card card1) {
+		if (card1.balhezas > this.balhezas) {
+			System.out.println(card1.nev + " nyert.");
+		} else if (card1.balhezas < this.balhezas) {
+			System.out.println(this.nev + " nyert.");
+		} else {
+			System.out.println("Döntetlen. Válassz más tulajdonságot.");
+		}
+	}
+
+	public void compareFeltekenyseg(Card card1) {
 		if (card1.feltekenyseg > this.feltekenyseg) {
 			System.out.println(card1.nev + " nyert.");
 		} else if (card1.feltekenyseg < this.feltekenyseg) {

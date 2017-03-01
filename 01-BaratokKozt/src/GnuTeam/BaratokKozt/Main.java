@@ -76,7 +76,7 @@ public class Main {
 		Card myCard = hand.showCard(hand.cardsInHand);
 		hand.chooseSkill();
 		Card AICard = hand.showCard(hand.aiCards);
-		myCard.comparableIgazMondas(AICard);
+		myCard.compareIgazMondas(AICard);
 
 	}
 
