@@ -58,12 +58,27 @@ public class Hand {
 			if (inp > 3 || inp < 1) {
 				System.err.println("1-3 közötti számot adj meg!!!");
 			}
+
 		}
+		return inp;
+	}
+
+	public int showWinner(int inp) {
+
 		if (inp == 1) {
+			Card card = new Card(cardsInHand.get(0).nev, cardsInHand.get(0).igazMondas, cardsInHand.get(0).balhezas,
+					cardsInHand.get(0).feltekenyseg);
+			card.compareIgazMondas(aiCards.get(0));
 			return cardsInHand.get(0).igazMondas;
 		} else if (inp == 2) {
+			Card card = new Card(cardsInHand.get(0).nev, cardsInHand.get(0).igazMondas, cardsInHand.get(0).balhezas,
+					cardsInHand.get(0).feltekenyseg);
+			card.compareBalhezas(aiCards.get(0));
 			return cardsInHand.get(0).balhezas;
 		} else if (inp == 3) {
+			Card card = new Card(cardsInHand.get(0).nev, cardsInHand.get(0).igazMondas, cardsInHand.get(0).balhezas,
+					cardsInHand.get(0).feltekenyseg);
+			card.compareFeltekenyseg(aiCards.get(0));
 			return cardsInHand.get(0).feltekenyseg;
 		}
 		return 1;

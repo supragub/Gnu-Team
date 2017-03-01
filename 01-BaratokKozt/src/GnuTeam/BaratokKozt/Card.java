@@ -37,9 +37,7 @@ public class Card {
 		} else if (card1.igazMondas < this.igazMondas) {
 			System.out.println(this.nev + " nyert.");
 		} else {
-			System.out.println("Döntetlen. Válassz más tulajdonságot.");
-			Hand hand = new Hand();
-			hand.chooseSkill();
+			System.out.println("Döntetlen.");
 		}
 	}
 
@@ -49,7 +47,7 @@ public class Card {
 		} else if (card1.balhezas < this.balhezas) {
 			System.out.println(this.nev + " nyert.");
 		} else {
-			System.out.println("Döntetlen. Válassz más tulajdonságot.");
+			System.out.println("Döntetlen.");
 		}
 	}
 
@@ -59,7 +57,7 @@ public class Card {
 		} else if (card1.feltekenyseg < this.feltekenyseg) {
 			System.out.println(this.nev + " nyert.");
 		} else {
-			System.out.println("Döntetlen. Válassz más tulajdonságot.");
+			System.out.println("Döntetlen");
 		}
 	}
 
