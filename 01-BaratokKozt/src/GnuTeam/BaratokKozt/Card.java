@@ -6,6 +6,7 @@ public class Card {
 	int igazMondas;
 	int balhezas;
 	int feltekenyseg;
+	int roundWinner;
 
 	public Card(String nev, int igazMondas, int balhezas, int feltekenyseg) {
 		this.nev = nev;
@@ -13,6 +14,9 @@ public class Card {
 		this.balhezas = balhezas;
 		this.feltekenyseg = feltekenyseg;
 
+	}
+
+	public Card() {
 	}
 
 	public String getNev() {
@@ -34,8 +38,10 @@ public class Card {
 	public void compareIgazMondas(Card card1) {
 		if (card1.igazMondas > this.igazMondas) {
 			System.out.println(card1.nev + " nyert.");
+			roundWinner = 1;
 		} else if (card1.igazMondas < this.igazMondas) {
 			System.out.println(this.nev + " nyert.");
+			roundWinner = 2;
 		} else {
 			System.out.println("Döntetlen.");
 		}
@@ -44,18 +50,23 @@ public class Card {
 	public void compareBalhezas(Card card1) {
 		if (card1.balhezas > this.balhezas) {
 			System.out.println(card1.nev + " nyert.");
+			roundWinner = 1;
 		} else if (card1.balhezas < this.balhezas) {
 			System.out.println(this.nev + " nyert.");
+			roundWinner = 2;
 		} else {
 			System.out.println("Döntetlen.");
 		}
 	}
 
 	public void compareFeltekenyseg(Card card1) {
+
 		if (card1.feltekenyseg > this.feltekenyseg) {
 			System.out.println(card1.nev + " nyert.");
+			roundWinner = 1;
 		} else if (card1.feltekenyseg < this.feltekenyseg) {
 			System.out.println(this.nev + " nyert.");
+			roundWinner = 2;
 		} else {
 			System.out.println("Döntetlen");
 		}

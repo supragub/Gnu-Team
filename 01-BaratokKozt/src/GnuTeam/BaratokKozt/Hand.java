@@ -5,6 +5,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Hand {
+
+	int myCounter = 0;
+	int AICounter = 0;
+
 	ArrayList<Card> cardsInHand = new ArrayList<Card>();
 	ArrayList<Card> aiCards = new ArrayList<Card>();
 
@@ -62,19 +66,31 @@ public class Hand {
 	public int showWinner(int inp, int i) {
 
 		if (inp == 1) {
-			Card card = new Card(cardsInHand.get(i).nev, cardsInHand.get(i).igazMondas, cardsInHand.get(i).balhezas,
-					cardsInHand.get(i).feltekenyseg);
+			Card card = cardsInHand.get(i);
 			card.compareIgazMondas(aiCards.get(i));
+			if (cardsInHand.get(i).roundWinner == 2) {
+				myCounter++;
+			} else if (cardsInHand.get(i).roundWinner == 1) {
+				AICounter++;
+			}
 			return cardsInHand.get(i).igazMondas;
 		} else if (inp == 2) {
-			Card card = new Card(cardsInHand.get(i).nev, cardsInHand.get(i).igazMondas, cardsInHand.get(i).balhezas,
-					cardsInHand.get(i).feltekenyseg);
+			Card card = cardsInHand.get(i);
 			card.compareBalhezas(aiCards.get(i));
+			if (cardsInHand.get(i).roundWinner == 2) {
+				myCounter++;
+			} else if (cardsInHand.get(i).roundWinner == 1) {
+				AICounter++;
+			}
 			return cardsInHand.get(i).balhezas;
 		} else if (inp == 3) {
-			Card card = new Card(cardsInHand.get(i).nev, cardsInHand.get(i).igazMondas, cardsInHand.get(i).balhezas,
-					cardsInHand.get(i).feltekenyseg);
+			Card card = cardsInHand.get(i);
 			card.compareFeltekenyseg(aiCards.get(i));
+			if (cardsInHand.get(i).roundWinner == 2) {
+				myCounter++;
+			} else if (cardsInHand.get(i).roundWinner == 1) {
+				AICounter++;
+			}
 			return cardsInHand.get(i).feltekenyseg;
 		}
 		return 1;

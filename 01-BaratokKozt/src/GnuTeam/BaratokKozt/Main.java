@@ -71,6 +71,7 @@ public class Main {
 		deck.cardList.add(card31);
 		deck.cardList.add(card32);
 		Hand hand = new Hand();
+		Card card = new Card();
 		hand.getCards(deck.cardList);
 		hand.getAICards(deck.cardList);
 		for (int i = 0; i <= hand.cardsInHand.size(); i++) {
@@ -78,6 +79,8 @@ public class Main {
 			int inp = hand.chooseSkill();
 			Card AICard = hand.showCard(hand.aiCards, i);
 			hand.showWinner(inp, i);
+			System.out.println("Nyert körök: " + hand.myCounter + ".");
+			System.out.println("Gép által nyert körök: " + hand.AICounter + ".");
 			System.out.println("-------------------");
 		}
 
