@@ -1,18 +1,19 @@
 package GnuTeam.BaratokKozt;
 
 import java.io.BufferedInputStream;
+
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class Logo {
+public class LoadData {
 
 	@SuppressWarnings("deprecation")
-	public void logo() {
+	public void loadFile(String textFile) {
 
-		File file = new File("baratok-kozt-logo.txt");
+		File file = new File(textFile);
 		FileInputStream fis = null;
 		BufferedInputStream bis = null;
 		DataInputStream dis = null;
